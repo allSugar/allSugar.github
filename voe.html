@@ -24,11 +24,11 @@
     stop.addEventListener("click", function () {
       //用于关闭worker线程
       worker.terminate();
-      worker.onmessage = onmessage;
     });
     start.addEventListener("click", function () {
       //开起worker线程
       worker = new Worker("js/voe.js");
+      worker.onmessage = onmessage;
     });
     ale.addEventListener("click", function () {
       alert("i'm a dialog");
